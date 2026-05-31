@@ -151,7 +151,7 @@
       background-color: var(--green-dark);
       background:
         linear-gradient(90deg, rgba(16, 40, 28, 0.98), rgba(16, 40, 28, 0.86), rgba(16, 40, 28, 0.5)),
-        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=80");
+        url("tree-work-after.jpg");
       background-size: cover;
       background-position: center;
       color: var(--white);
@@ -235,6 +235,16 @@
       color: var(--white);
     }
 
+    .btn-whatsapp {
+      background: #25D366;
+      color: #10281c;
+    }
+
+    .btn-text {
+      background: var(--gold);
+      color: var(--green-dark);
+    }
+
     section { padding: 90px 6%; }
 
     .container {
@@ -272,7 +282,11 @@
     }
 
     .contact-info {
-      background: var(--green-dark);
+      background:
+        linear-gradient(135deg, rgba(16, 40, 28, 0.97), rgba(16, 40, 28, 0.9)),
+        url("branch-chipping.jpg");
+      background-size: cover;
+      background-position: center;
       color: var(--white);
       padding: 46px;
     }
@@ -283,7 +297,7 @@
     }
 
     .contact-info p {
-      color: rgba(255, 255, 255, 0.82);
+      color: rgba(255, 255, 255, 0.86);
       font-size: 18px;
       margin-bottom: 26px;
     }
@@ -380,6 +394,20 @@
       margin: 18px 0;
     }
 
+    .send-options {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 14px;
+      font-weight: 700;
+    }
+
     .quick-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -447,7 +475,11 @@
     }
 
     .help-list {
-      background: var(--green-dark);
+      background:
+        linear-gradient(135deg, rgba(16, 40, 28, 0.96), rgba(16, 40, 28, 0.9)),
+        url("garden-clearance-after.jpg");
+      background-size: cover;
+      background-position: center;
       color: var(--white);
       border-radius: 26px;
       padding: 28px;
@@ -466,7 +498,7 @@
     }
 
     .help-list li {
-      color: rgba(255, 255, 255, 0.88);
+      color: rgba(255, 255, 255, 0.9);
       font-weight: 800;
     }
 
@@ -656,6 +688,10 @@
         grid-template-columns: 1fr;
       }
 
+      .send-options .btn {
+        width: 100%;
+      }
+
       .brand small { display: none; }
     }
 
@@ -771,7 +807,8 @@
           <h2>Talk directly to Noel.</h2>
           <p>
             For the quickest estimate, send a few clear photos of the job by WhatsApp.
-            Include the hedge, tree, garden area, access and any waste to be removed.
+            Include the hedge, tree, garden area, access and branches or cuttings to be chipped,
+            stacked or handled on site where agreed.
           </p>
 
           <div class="contact-card">
@@ -796,13 +833,13 @@
         </div>
 
         <div class="contact-form">
-          <h2>Online enquiry</h2>
+          <h2>Send an enquiry</h2>
           <p>
-            This form opens an email from your device. You can also call or use WhatsApp
-            if that is easier.
+            Fill in the details below, then choose WhatsApp or text message. The message will open
+            on your phone ready to send to Carey Tree and Garden Services.
           </p>
 
-          <form action="mailto:noelcarey74@yahoo.ie" method="post" enctype="text/plain">
+          <form id="quoteForm">
             <div class="form-grid">
               <div class="field">
                 <label for="name">Your name</label>
@@ -836,14 +873,26 @@
 
             <div class="field">
               <label for="message">Job details</label>
-              <textarea id="message" name="Message" placeholder="Tell Noel what needs doing. Mention access, waste, trees, hedges, parking and anything important."></textarea>
+              <textarea id="message" name="Message" placeholder="Tell Noel what needs doing. Mention access, trees, hedges, parking and anything important."></textarea>
             </div>
 
             <div class="form-note">
-              For photos, WhatsApp is best. Send clear photos of the work area for a quicker guide price.
+              WhatsApp is best for photos. After the message opens, you can add photos before sending.
             </div>
 
-            <button class="btn btn-dark" type="submit">Send Email Enquiry</button>
+            <div class="send-options">
+              <button class="btn btn-whatsapp" type="button" onclick="sendWhatsAppMessage()">
+                Send by WhatsApp
+              </button>
+
+              <button class="btn btn-text" type="button" onclick="sendTextMessage()">
+                Send by Text Message
+              </button>
+            </div>
+
+            <p class="small-note">
+              Your message will include your name, phone number, job type, location and job details.
+            </p>
           </form>
         </div>
       </div>
@@ -898,7 +947,7 @@
           <ul>
             <li>The full hedge, tree or garden area</li>
             <li>Access for tools, trailer or chipper</li>
-            <li>Any branches, green waste or timber</li>
+            <li>Branches, cuttings or timber to be handled on site</li>
             <li>Nearby sheds, walls, cars, glasshouses or buildings</li>
             <li>Parking and entrance points</li>
             <li>Your location or Eircode area</li>
@@ -1050,6 +1099,46 @@
       window.addEventListener("pageshow", function () {
         closeMobileMenu();
       });
+    }
+
+    function getFormValue(id, fallback) {
+      const element = document.getElementById(id);
+      const value = element ? element.value.trim() : "";
+      return value || fallback;
+    }
+
+    function buildCustomerMessage() {
+      const name = getFormValue("name", "Not provided");
+      const phone = getFormValue("phone", "Not provided");
+      const service = getFormValue("service", "Not provided");
+      const location = getFormValue("location", "Not provided");
+      const details = getFormValue("message", "Not provided");
+
+      return [
+        "New enquiry for Carey Tree and Garden Services",
+        "",
+        "Name: " + name,
+        "Phone: " + phone,
+        "Service: " + service,
+        "Location: " + location,
+        "",
+        "Job details:",
+        details,
+        "",
+        "Sent from careytreeandgardenservices.ie"
+      ].join("\n");
+    }
+
+    function sendWhatsAppMessage() {
+      const message = buildCustomerMessage();
+      const whatsappUrl = "https://wa.me/353857800352?text=" + encodeURIComponent(message);
+      window.open(whatsappUrl, "_blank");
+    }
+
+    function sendTextMessage() {
+      const message = buildCustomerMessage();
+      const smsUrl = "sms:+353857800352&body=" + encodeURIComponent(message);
+      window.location.href = smsUrl;
     }
   </script>
 
