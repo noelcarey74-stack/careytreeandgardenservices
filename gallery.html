@@ -65,6 +65,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      position: relative;
     }
 
     .brand {
@@ -86,6 +87,7 @@
       color: var(--gold);
       font-weight: 900;
       box-shadow: 0 10px 24px rgba(16, 40, 28, 0.22);
+      flex: 0 0 auto;
     }
 
     .brand small {
@@ -120,12 +122,35 @@
       border-radius: 999px;
       font-weight: 800;
       box-shadow: 0 10px 24px rgba(31, 91, 59, 0.25);
+      white-space: nowrap;
+    }
+
+    .mobile-menu-button {
+      display: none;
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 11px 16px;
+      border: none;
+      border-radius: 999px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(16, 40, 28, 0.18);
+      white-space: nowrap;
+      font: inherit;
+    }
+
+    .mobile-menu-panel {
+      display: none;
+    }
+
+    .mobile-menu-panel.open {
+      display: block;
     }
 
     .hero {
       background:
-        linear-gradient(90deg, rgba(16, 40, 28, 0.96), rgba(16, 40, 28, 0.76), rgba(16, 40, 28, 0.32)),
-        url("https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1800&q=80");
+        linear-gradient(90deg, rgba(16, 40, 28, 0.97), rgba(16, 40, 28, 0.78), rgba(16, 40, 28, 0.4)),
+        url("garden-clearance-after.jpg");
       background-size: cover;
       background-position: center;
       color: var(--white);
@@ -170,7 +195,7 @@
     .hero p {
       max-width: 820px;
       font-size: clamp(18px, 2vw, 22px);
-      color: rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.92);
       margin-bottom: 34px;
     }
 
@@ -196,9 +221,9 @@
     }
 
     .btn-outline {
-      border: 1px solid rgba(255, 255, 255, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.42);
       color: var(--white);
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(16, 40, 28, 0.25);
     }
 
     .btn-dark {
@@ -259,7 +284,7 @@
     }
 
     .notice p {
-      color: rgba(255, 255, 255, 0.82);
+      color: rgba(255, 255, 255, 0.84);
       font-size: 18px;
     }
 
@@ -327,11 +352,10 @@
     }
 
     .photo::after {
-      content: "Photo coming soon";
       position: absolute;
       left: 16px;
       bottom: 16px;
-      background: rgba(16, 40, 28, 0.86);
+      background: rgba(16, 40, 28, 0.88);
       color: var(--white);
       padding: 8px 12px;
       border-radius: 999px;
@@ -339,12 +363,23 @@
       font-weight: 900;
     }
 
-    .hedges { background-image: url("https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=900&q=80"); }
-    .trees { background-image: url("https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=900&q=80"); }
-    .clearance { background-image: url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=80"); }
-    .grounds { background-image: url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"); }
-    .storm { background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"); }
-    .chipping { background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"); }
+    .hedges { background-image: url("hedge-after.jpg"); }
+    .hedges::after { content: "Hedge tidy-up"; }
+
+    .trees { background-image: url("tree-work-after.jpg"); }
+    .trees::after { content: "Tree work"; }
+
+    .clearance { background-image: url("garden-clearance-after.jpg"); }
+    .clearance::after { content: "Garden clearance"; }
+
+    .grounds { background-image: url("grounds-maintenance.jpg"); }
+    .grounds::after { content: "Grounds maintenance"; }
+
+    .storm { background-image: url("storm-cleanup.jpg"); }
+    .storm::after { content: "Storm clean-up"; }
+
+    .chipping { background-image: url("branch-chipping.jpg"); }
+    .chipping::after { content: "Branch chipping"; }
 
     .gallery-content {
       padding: 26px;
@@ -384,8 +419,8 @@
 
     .ba-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      grid-template-columns: 1fr;
+      gap: 28px;
       margin-top: 42px;
     }
 
@@ -398,56 +433,69 @@
     }
 
     .ba-card h3 {
-      font-size: 28px;
+      font-size: 30px;
       color: var(--green-dark);
       margin-bottom: 12px;
+      letter-spacing: -0.8px;
     }
 
     .ba-card p {
       color: var(--muted);
       font-size: 17px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      max-width: 900px;
     }
 
     .split-demo {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 14px;
     }
 
     .split-box {
-      min-height: 190px;
-      border-radius: 20px;
+      min-height: 330px;
+      border-radius: 22px;
       display: flex;
       align-items: flex-end;
-      padding: 16px;
+      padding: 18px;
       color: var(--white);
       font-weight: 900;
       background-size: cover;
       background-position: center;
       overflow: hidden;
       position: relative;
+      box-shadow: 0 12px 34px rgba(16, 40, 28, 0.14);
     }
 
     .split-box::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(transparent, rgba(16, 40, 28, 0.72));
+      background: linear-gradient(transparent, rgba(16, 40, 28, 0.78));
     }
 
     .split-box span {
       position: relative;
       z-index: 2;
+      background: rgba(16, 40, 28, 0.88);
+      padding: 9px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
     }
 
-    .before {
-      background-image: url("https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=800&q=80");
+    .split-box.after-label span {
+      background: rgba(212, 166, 74, 0.95);
+      color: var(--green-dark);
     }
 
-    .after {
-      background-image: url("https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80");
-    }
+    .hedge-before { background-image: url("hedge-before.jpg"); }
+    .hedge-after { background-image: url("hedge-after.jpg"); }
+
+    .garden-before { background-image: url("garden-clearance-before.jpg"); }
+    .garden-after { background-image: url("garden-clearance-after.jpg"); }
+
+    .tree-before { background-image: url("tree-work-before.jpg"); }
+    .tree-after { background-image: url("tree-work-after.jpg"); }
 
     .photo-tip {
       background: var(--white);
@@ -500,7 +548,7 @@
     .cta {
       background:
         linear-gradient(135deg, rgba(16, 40, 28, 0.94), rgba(31, 91, 59, 0.9)),
-        url("https://images.unsplash.com/photo-1520052203542-d3095f1b6cf0?auto=format&fit=crop&w=1600&q=80");
+        url("cork-munster.jpg");
       background-size: cover;
       background-position: center;
       color: var(--white);
@@ -514,7 +562,7 @@
     }
 
     .cta p {
-      color: rgba(255, 255, 255, 0.82);
+      color: rgba(255, 255, 255, 0.9);
       max-width: 760px;
       margin: 0 auto 32px;
       font-size: 19px;
@@ -557,6 +605,37 @@
     @media (max-width: 1000px) {
       .menu { display: none; }
 
+      .mobile-menu-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mobile-menu-panel {
+        position: absolute;
+        top: 82px;
+        left: 6%;
+        right: 6%;
+        background: var(--white);
+        border-radius: 24px;
+        padding: 18px;
+        box-shadow: 0 24px 60px rgba(16, 40, 28, 0.22);
+        border: 1px solid rgba(16, 40, 28, 0.1);
+        z-index: 999;
+      }
+
+      .mobile-menu-panel a {
+        display: block;
+        padding: 14px 16px;
+        border-radius: 14px;
+        color: var(--green-dark);
+        font-weight: 900;
+      }
+
+      .mobile-menu-panel a:hover {
+        background: var(--green-soft);
+      }
+
       .notice,
       .photo-tip,
       .footer-grid {
@@ -566,13 +645,46 @@
       .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
-      .ba-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 640px) {
+      .topbar {
+        font-size: 13px;
+      }
+
+      .nav {
+        gap: 10px;
+        padding: 14px 4%;
+      }
+
+      .brand {
+        max-width: 180px;
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+      }
+
+      .nav-cta {
+        padding: 11px 14px;
+        font-size: 14px;
+      }
+
+      .mobile-menu-button {
+        padding: 11px 14px;
+        font-size: 14px;
+      }
+
+      .mobile-menu-panel {
+        top: 76px;
+        left: 4%;
+        right: 4%;
+      }
+
       .hero { padding: 72px 6%; }
 
       h1 { letter-spacing: -2px; }
@@ -584,6 +696,10 @@
         grid-template-columns: 1fr;
       }
 
+      .split-box {
+        min-height: 260px;
+      }
+
       .notice,
       .photo-tip {
         padding: 28px;
@@ -591,13 +707,38 @@
 
       .brand small { display: none; }
     }
+
+    @media (max-width: 430px) {
+      .topbar {
+        display: none;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .mobile-menu-button,
+      .nav-cta {
+        flex: 1;
+        text-align: center;
+      }
+
+      .mobile-menu-panel {
+        top: 118px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <div class="topbar">
-    <span>Before and after photos coming as jobs are completed</span>
+    <span>Before and after examples for hedge, garden and tree work</span>
     <span>Call Noel: <strong>085 780 0352</strong> | noelcarey74@yahoo.ie</span>
   </div>
 
@@ -611,7 +752,12 @@
         </div>
       </a>
 
+      <button type="button" id="mobile-menu-button" class="mobile-menu-button" aria-expanded="false">
+        ☰ Menu
+      </button>
+
       <div class="menu">
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="commercial.html">Commercial</a>
         <a href="about.html">About</a>
@@ -621,6 +767,16 @@
       </div>
 
       <a class="nav-cta" href="tel:0857800352">Call Noel</a>
+
+      <div class="mobile-menu-panel">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -631,8 +787,9 @@
         <div class="eyebrow">Gallery and before & after work</div>
         <h1>See the finish. Clean, tidy, practical outdoor work.</h1>
         <p>
-          This gallery will show completed tree work, hedge cutting, garden clearances,
-          branch chipping, storm clean-up and grounds maintenance jobs across Cork and Munster.
+          View examples of hedge cutting, tree work, garden clearances, branch chipping,
+          storm clean-up and grounds maintenance. As real jobs are completed, this page can
+          be updated with Noel’s own before-and-after photos.
         </p>
 
         <div class="hero-actions">
@@ -647,27 +804,29 @@
 
         <div class="notice">
           <div>
-            <h2>Real job photos will be added here.</h2>
+            <h2>Before-and-after photos build trust fast.</h2>
             <p>
-              As work is completed, this page will be updated with before-and-after photos from
-              hedge cutting, tree work, garden clearances, branch chipping and grounds maintenance jobs.
+              Customers can quickly see the difference between an overgrown area and a clean,
+              tidy finish. This page is designed to show hedge tidy-ups, garden clearances,
+              tree work and outdoor maintenance in a clear professional way.
             </p>
           </div>
 
           <div class="notice-box">
-            <strong>Why photos matter</strong>
+            <strong>Tip for future jobs</strong>
             <p>
-              Before-and-after photos help customers see the quality of the finish, the tidy clean-up
-              and the type of work Carey Tree and Garden Services can take on.
+              Take one photo before starting and one from the same angle after finishing.
+              That will make this page even stronger as the business grows.
             </p>
           </div>
         </div>
 
         <div class="section-head">
           <div class="label">Work categories</div>
-          <h2>Gallery ready for completed jobs.</h2>
+          <h2>Examples of the work Carey Tree and Garden Services can take on.</h2>
           <p>
-            These sections are set up now so real work photos can be added as the business grows.
+            These image sections show the main services clearly: hedges, trees, garden clearances,
+            chipping, grounds maintenance and storm clean-up.
           </p>
         </div>
 
@@ -729,8 +888,8 @@
               <p>Branches and hedge cuttings chipped where suitable to reduce bulk.</p>
               <div class="tag-row">
                 <span class="tag">Chipping</span>
-                <span class="tag">Waste</span>
-                <span class="tag">Mulch</span>
+                <span class="tag">Branches</span>
+                <span class="tag">Cuttings</span>
               </div>
             </div>
           </article>
@@ -769,36 +928,51 @@
       <div class="container">
         <div class="section-head">
           <div class="label">Before & after</div>
-          <h2>Designed to show real results clearly.</h2>
+          <h2>Clear examples of the finish customers can expect.</h2>
           <p>
-            When the first jobs are completed, we can replace these sample panels with your own photos.
+            These panels are designed to show the transformation: messy or overgrown before,
+            neat and tidy after.
           </p>
         </div>
 
         <div class="ba-grid">
+
           <div class="ba-card">
             <h3>Hedge tidy-up example</h3>
             <p>
-              Ideal for showing overgrown hedges before work and the clean finish after trimming,
-              shaping and clearing.
+              A useful example for showing overgrown hedges before work and the clean finish
+              after trimming, shaping and tidying.
             </p>
             <div class="split-demo">
-              <div class="split-box before"><span>Before</span></div>
-              <div class="split-box after"><span>After</span></div>
+              <div class="split-box hedge-before"><span>Before</span></div>
+              <div class="split-box hedge-after after-label"><span>After</span></div>
             </div>
           </div>
 
           <div class="ba-card">
             <h3>Garden clearance example</h3>
             <p>
-              Useful for showing brambles, bushes, waste and rough areas before and after clean-up,
-              strimming, chipping and clearing.
+              Shows an overgrown garden before and a cleaner, more usable outdoor space after
+              clearance, cutting back and tidying.
             </p>
             <div class="split-demo">
-              <div class="split-box before"><span>Before</span></div>
-              <div class="split-box after"><span>After</span></div>
+              <div class="split-box garden-before"><span>Before</span></div>
+              <div class="split-box garden-after after-label"><span>After</span></div>
             </div>
           </div>
+
+          <div class="ba-card">
+            <h3>Tree work example</h3>
+            <p>
+              Shows tree work before and after, giving customers a clear idea of careful pruning,
+              branch management and a tidy finished area.
+            </p>
+            <div class="split-demo">
+              <div class="split-box tree-before"><span>Before</span></div>
+              <div class="split-box tree-after after-label"><span>After</span></div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -809,8 +983,8 @@
           <div class="label">For future jobs</div>
           <h2>Every good job should become future advertising.</h2>
           <p>
-            Before-and-after photos will help this website rank better, look more professional
-            and build trust with customers before they call.
+            Before-and-after photos will help this website look more professional and build trust
+            with customers before they call.
           </p>
           <p>
             The best photos are simple: take one clear photo before starting, one halfway if useful,
@@ -883,6 +1057,66 @@
       © 2026 Carey Tree and Garden Services. All rights reserved. Serving Cork and Munster.
     </div>
   </footer>
+
+  <script>
+    const menuButton = document.getElementById("mobile-menu-button");
+    const menuPanel = document.querySelector(".mobile-menu-panel");
+
+    function closeMobileMenu() {
+      if (menuPanel) {
+        menuPanel.classList.remove("open");
+      }
+
+      if (menuButton) {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰ Menu";
+      }
+    }
+
+    function openMobileMenu() {
+      if (menuPanel) {
+        menuPanel.classList.add("open");
+      }
+
+      if (menuButton) {
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.textContent = "× Close";
+      }
+    }
+
+    if (menuButton && menuPanel) {
+      menuButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        if (menuPanel.classList.contains("open")) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+
+      const menuLinks = menuPanel.querySelectorAll("a");
+
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          closeMobileMenu();
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        const clickedInsideMenu = menuPanel.contains(event.target);
+        const clickedButton = menuButton.contains(event.target);
+
+        if (!clickedInsideMenu && !clickedButton) {
+          closeMobileMenu();
+        }
+      });
+
+      window.addEventListener("pageshow", function () {
+        closeMobileMenu();
+      });
+    }
+  </script>
 
 </body>
 </html>
