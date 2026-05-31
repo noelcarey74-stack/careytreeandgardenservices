@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://careytreeandgardenservices.ie/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://careytreeandgardenservices.ie/services.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://careytreeandgardenservices.ie/commercial.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://careytreeandgardenservices.ie/about.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://careytreeandgardenservices.ie/gallery.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://careytreeandgardenservices.ie/reviews.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://careytreeandgardenservices.ie/contact.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://careytreeandgardenservices.ie/privacy.html</loc>
+    <priority>0.40</priority>
+  </url>
+
+</urlset>
