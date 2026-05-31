@@ -139,24 +139,26 @@
       white-space: nowrap;
     }
 
-    .mobile-menu-toggle {
-      display: none;
-    }
-
     .mobile-menu-button {
       display: none;
       background: var(--green-dark);
       color: var(--white);
       padding: 11px 16px;
+      border: none;
       border-radius: 999px;
       font-weight: 900;
       cursor: pointer;
       box-shadow: 0 10px 24px rgba(16, 40, 28, 0.18);
       white-space: nowrap;
+      font: inherit;
     }
 
     .mobile-menu-panel {
       display: none;
+    }
+
+    .mobile-menu-panel.open {
+      display: block;
     }
 
     .hero {
@@ -673,7 +675,6 @@
       }
 
       .mobile-menu-panel {
-        display: none;
         position: absolute;
         top: 82px;
         left: 6%;
@@ -696,10 +697,6 @@
 
       .mobile-menu-panel a:hover {
         background: var(--green-soft);
-      }
-
-      .mobile-menu-toggle:checked ~ .mobile-menu-panel {
-        display: block;
       }
     }
 
@@ -818,11 +815,9 @@
         </div>
       </a>
 
-      <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
-
-      <label for="mobile-menu-toggle" class="mobile-menu-button">
+      <button type="button" id="mobile-menu-button" class="mobile-menu-button" aria-expanded="false">
         ☰ Menu
-      </label>
+      </button>
 
       <div class="menu">
         <a href="services.html">Services</a>
@@ -1116,17 +1111,43 @@
   </footer>
 
   <script>
+    const menuButton = document.getElementById("mobile-menu-button");
+    const menuPanel = document.querySelector(".mobile-menu-panel");
+
     function closeMobileMenu() {
-      const menuToggle = document.getElementById("mobile-menu-toggle");
-      if (menuToggle) {
-        menuToggle.checked = false;
+      if (menuPanel) {
+        menuPanel.classList.remove("open");
+      }
+
+      if (menuButton) {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰ Menu";
       }
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      closeMobileMenu();
+    function openMobileMenu() {
+      if (menuPanel) {
+        menuPanel.classList.add("open");
+      }
 
-      const menuLinks = document.querySelectorAll(".mobile-menu-panel a");
+      if (menuButton) {
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.textContent = "× Close";
+      }
+    }
+
+    if (menuButton && menuPanel) {
+      menuButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        if (menuPanel.classList.contains("open")) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+
+      const menuLinks = menuPanel.querySelectorAll("a");
 
       menuLinks.forEach(function (link) {
         link.addEventListener("click", function () {
@@ -1135,26 +1156,18 @@
       });
 
       document.addEventListener("click", function (event) {
-        const menuToggle = document.getElementById("mobile-menu-toggle");
-        const menuPanel = document.querySelector(".mobile-menu-panel");
-        const menuButton = document.querySelector(".mobile-menu-button");
-
-        if (!menuToggle || !menuPanel || !menuButton) {
-          return;
-        }
-
         const clickedInsideMenu = menuPanel.contains(event.target);
-        const clickedMenuButton = menuButton.contains(event.target);
+        const clickedButton = menuButton.contains(event.target);
 
-        if (menuToggle.checked && !clickedInsideMenu && !clickedMenuButton) {
+        if (!clickedInsideMenu && !clickedButton) {
           closeMobileMenu();
         }
       });
-    });
 
-    window.addEventListener("pageshow", function () {
-      closeMobileMenu();
-    });
+      window.addEventListener("pageshow", function () {
+        closeMobileMenu();
+      });
+    }
   </script>
 
 </body>
