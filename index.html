@@ -378,19 +378,49 @@
     .service-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 28px;
+      padding: 0;
       box-shadow: 0 14px 40px rgba(16, 40, 28, 0.08);
       border: 1px solid rgba(16, 40, 28, 0.08);
       transition: 0.22s ease;
-      min-height: 260px;
+      min-height: 315px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      overflow: hidden;
     }
 
     .service-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 24px 55px rgba(16, 40, 28, 0.14);
+    }
+
+    .service-card-content {
+      padding: 24px 28px 28px;
+    }
+
+    .service-photo {
+      min-height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid rgba(16, 40, 28, 0.08);
+    }
+
+    .chipping-photo {
+      background-image:
+        linear-gradient(rgba(16, 40, 28, 0.05), rgba(16, 40, 28, 0.1)),
+        url("branch-chipping.jpg");
+    }
+
+    .grounds-photo {
+      background-image:
+        linear-gradient(rgba(16, 40, 28, 0.05), rgba(16, 40, 28, 0.1)),
+        url("grounds-maintenance.jpg");
+    }
+
+    .storm-photo {
+      background-image:
+        linear-gradient(rgba(16, 40, 28, 0.05), rgba(16, 40, 28, 0.1)),
+        url("storm-cleanup.jpg");
     }
 
     .icon {
@@ -513,7 +543,7 @@
       min-height: 440px;
       background:
         linear-gradient(rgba(16, 40, 28, 0.05), rgba(16, 40, 28, 0.1)),
-        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80");
+        url("grounds-maintenance.jpg");
       background-size: cover;
       background-position: center;
     }
@@ -904,57 +934,60 @@
 
         <div class="service-grid">
           <a class="service-card" href="services.html">
-            <div>
+            <div class="service-card-content">
               <div class="icon">🌳</div>
               <h3>Tree Work</h3>
               <p>Small tree cutting, pruning, branch removal, storm-damaged branches and safe tidy-ups.</p>
+              <span class="learn">View tree services →</span>
             </div>
-            <span class="learn">View tree services →</span>
           </a>
 
           <a class="service-card" href="services.html">
-            <div>
+            <div class="service-card-content">
               <div class="icon">✂️</div>
               <h3>Hedge Cutting</h3>
               <p>Hedge trimming, shaping, reductions and seasonal maintenance for homes and commercial sites.</p>
+              <span class="learn">View hedge cutting →</span>
             </div>
-            <span class="learn">View hedge cutting →</span>
           </a>
 
           <a class="service-card" href="services.html">
-            <div>
+            <div class="service-card-content">
               <div class="icon">🌿</div>
               <h3>Garden Maintenance</h3>
               <p>Grass cutting, strimming, edging, overgrown gardens, brambles and general outdoor upkeep.</p>
+              <span class="learn">View garden work →</span>
             </div>
-            <span class="learn">View garden work →</span>
           </a>
 
           <a class="service-card" href="services.html">
-            <div>
+            <div class="service-photo chipping-photo"></div>
+            <div class="service-card-content">
               <div class="icon">🪵</div>
               <h3>Chipping & Clearances</h3>
               <p>Branches and hedge cuttings chipped where suitable, reducing waste and leaving a clean area.</p>
+              <span class="learn">View clearances →</span>
             </div>
-            <span class="learn">View clearances →</span>
           </a>
 
           <a class="service-card" href="commercial.html">
-            <div>
+            <div class="service-photo grounds-photo"></div>
+            <div class="service-card-content">
               <div class="icon">🏫</div>
               <h3>Commercial Grounds</h3>
               <p>Grounds maintenance for schools, clubs, car parks, estates, apartment blocks and business premises.</p>
+              <span class="learn">View commercial work →</span>
             </div>
-            <span class="learn">View commercial work →</span>
           </a>
 
           <a class="service-card" href="services.html">
-            <div>
+            <div class="service-photo storm-photo"></div>
+            <div class="service-card-content">
               <div class="icon">🌧️</div>
               <h3>Storm Clean-Up</h3>
               <p>Storm branches, fallen limbs, garden damage, cutting, clearing and tidy-up after bad weather.</p>
+              <span class="learn">View storm clean-up →</span>
             </div>
-            <span class="learn">View storm clean-up →</span>
           </a>
         </div>
       </div>
