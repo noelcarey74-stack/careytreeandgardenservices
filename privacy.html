@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | Carey Tree and Garden Services Cork</title>
+
+  <meta name="description" content="Privacy policy for Carey Tree and Garden Services, covering customer contact details, quotes, enquiries, photos and service information for tree, hedge, garden and grounds maintenance work across Cork and Munster." />
+
+  <style>
+    :root {
+      --green-dark: #10281c;
+      --green: #1f5b3b;
+      --green-soft: #eaf4ee;
+      --gold: #d4a64a;
+      --cream: #f7f3ea;
+      --white: #ffffff;
+      --text: #1f2a24;
+      --muted: #66736b;
+      --shadow: 0 18px 55px rgba(0, 0, 0, 0.12);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .topbar {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 10px 6%;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(16, 40, 28, 0.08);
+    }
+
+    .nav {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      color: var(--green-dark);
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(16, 40, 28, 0.22);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: -2px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    .menu a { opacity: 0.85; }
+
+    .menu a:hover,
+    .menu a.active {
+      opacity: 1;
+      color: var(--green);
+    }
+
+    .nav-cta {
+      background: var(--green);
+      color: var(--white);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(31, 91, 59, 0.25);
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(16, 40, 28, 0.96), rgba(16, 40, 28, 0.76), rgba(16, 40, 28, 0.28)),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=80");
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      padding: 100px 6%;
+    }
+
+    .hero-inner {
+      max-width: 1220px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(212, 166, 74, 0.18);
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 74px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 780px;
+      font-size: clamp(18px, 2vw, 21px);
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    section { padding: 90px 6%; }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .policy-card {
+      background: var(--white);
+      border-radius: 36px;
+      padding: 48px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(16, 40, 28, 0.08);
+      margin-top: -38px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .label {
+      color: var(--green);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      color: var(--green-dark);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: var(--green-dark);
+      font-size: 24px;
+      margin-top: 34px;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      margin: 12px 0 18px 22px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    li { margin-bottom: 8px; }
+
+    .highlight {
+      background: var(--green-soft);
+      border: 1px solid rgba(31, 91, 59, 0.14);
+      border-radius: 22px;
+      padding: 22px;
+      margin: 26px 0;
+      color: var(--green-dark);
+      font-weight: 800;
+    }
+
+    .contact-box {
+      background: var(--green-dark);
+      color: var(--white);
+      border-radius: 26px;
+      padding: 28px;
+      margin-top: 34px;
+    }
+
+    .contact-box h3 {
+      color: var(--gold);
+      margin-top: 0;
+    }
+
+    .contact-box p,
+    .contact-box a {
+      color: rgba(255, 255, 255, 0.84);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-weight: 900;
+      transition: 0.2s ease;
+      background: var(--green);
+      color: var(--white);
+      margin-top: 18px;
+    }
+
+    footer {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 54px 6% 24px;
+    }
+
+    .footer-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      gap: 34px;
+      padding-bottom: 34px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    footer h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: var(--gold);
+    }
+
+    footer p, footer a {
+      color: rgba(255, 255, 255, 0.78);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .copyright {
+      max-width: 1220px;
+      margin: 22px auto 0;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 14px;
+    }
+
+    @media (max-width: 1000px) {
+      .menu { display: none; }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 72px 6%; }
+
+      h1 { letter-spacing: -2px; }
+
+      section { padding: 64px 6%; }
+
+      .policy-card {
+        padding: 28px;
+      }
+
+      .brand small { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <span>Privacy Policy for Carey Tree and Garden Services</span>
+    <span>Call Noel: <strong>085 780 0352</strong> | noelcarey74@yahoo.ie</span>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">CT</div>
+        <div>
+          Carey Tree and Garden Services
+          <small>Tree • Hedge • Garden • Grounds</small>
+        </div>
+      </a>
+
+      <div class="menu">
+        <a href="services.html">Services</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="tel:0857800352">Call Noel</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Privacy Policy</div>
+        <h1>How customer information is handled.</h1>
+        <p>
+          This privacy policy explains how Carey Tree and Garden Services handles contact details,
+          enquiry information, job photos and customer communication.
+        </p>
+      </div>
+    </section>
+
+    <section style="padding-top: 0;">
+      <div class="container policy-card">
+        <div class="label">Carey Tree and Garden Services</div>
+        <h2>Privacy Policy</h2>
+
+        <p>
+          Carey Tree and Garden Services is a local tree, hedge, garden and grounds maintenance service
+          based in Cork, Ireland. This policy explains how we collect, use and protect customer information.
+        </p>
+
+        <div class="highlight">
+          We only ask for information needed to answer enquiries, provide quotes, arrange work,
+          complete jobs and communicate with customers.
+        </div>
+
+        <h3>1. Information we may collect</h3>
+        <p>When you contact Carey Tree and Garden Services, we may collect:</p>
+        <ul>
+          <li>Your name</li>
+          <li>Your phone number</li>
+          <li>Your email address</li>
+          <li>Your general location or job address</li>
+          <li>Photos or videos you send of trees, hedges, gardens, grounds or access areas</li>
+          <li>Details about the work you need priced or completed</li>
+          <li>Messages sent by phone, email, WhatsApp or website enquiry</li>
+        </ul>
+
+        <h3>2. How we use your information</h3>
+        <p>Your information may be used to:</p>
+        <ul>
+          <li>Reply to your enquiry</li>
+          <li>Provide a quote or guide price</li>
+          <li>Arrange a site visit</li>
+          <li>Plan and complete agreed work</li>
+          <li>Send invoices, receipts or job-related messages</li>
+          <li>Keep records for business, insurance and tax purposes</li>
+        </ul>
+
+        <h3>3. Photos and videos</h3>
+        <p>
+          Customers may send photos or videos by WhatsApp, email or message to help price a job.
+          These images are used to understand the work required, access, waste, machinery needs and safety considerations.
+        </p>
+        <p>
+          We will not knowingly publish customer photos publicly on the website, social media or advertising
+          without permission.
+        </p>
+
+        <h3>4. Sharing information</h3>
+        <p>
+          Carey Tree and Garden Services does not sell customer information.
+          Information may only be shared when necessary, for example:
+        </p>
+        <ul>
+          <li>With an accountant or professional adviser</li>
+          <li>With an insurer if required for a claim or job-related matter</li>
+          <li>With a subcontractor or helper if required to complete agreed work</li>
+          <li>Where required by law, Revenue, insurance or legal obligations</li>
+        </ul>
+
+        <h3>5. How long we keep information</h3>
+        <p>
+          Enquiry and job information may be kept for as long as reasonably needed for business records,
+          tax records, insurance, customer service and legal obligations.
+        </p>
+
+        <h3>6. WhatsApp, phone and email</h3>
+        <p>
+          If you contact us using WhatsApp, phone or email, your information may also be processed by those
+          services according to their own privacy policies. Customers should avoid sending unnecessary personal
+          information in messages.
+        </p>
+
+        <h3>7. Website forms</h3>
+        <p>
+          The contact form on this website is designed to open an email from your own device.
+          It does not store information in a website database.
+        </p>
+
+        <h3>8. Cookies and analytics</h3>
+        <p>
+          This website is a simple information website. At present, it does not use customer accounts,
+          online payments or tracking-heavy systems.
+        </p>
+        <p>
+          If analytics or advertising tools are added in the future, this policy may be updated.
+        </p>
+
+        <h3>9. Your rights</h3>
+        <p>
+          You can contact Carey Tree and Garden Services to ask about personal information held about you,
+          or to request correction or deletion where appropriate.
+        </p>
+
+        <h3>10. Policy updates</h3>
+        <p>
+          This privacy policy may be updated from time to time as the business or website develops.
+        </p>
+
+        <div class="contact-box">
+          <h3>Contact details</h3>
+          <p><strong>Carey Tree and Garden Services</strong></p>
+          <a href="tel:0857800352">Phone: 085 780 0352</a>
+          <a href="mailto:noelcarey74@yahoo.ie">Email: noelcarey74@yahoo.ie</a>
+          <p>Serving Cork and Munster.</p>
+          <a class="btn" href="contact.html">Back to Contact Page</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Carey Tree and Garden Services</h3>
+        <p>
+          Tree work, hedge cutting, garden maintenance, branch chipping, storm clean-up
+          and grounds maintenance across Cork and Munster.
+        </p>
+        <p>Fully insured with €6.5 million public liability cover. Insurance details available on request.</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:0857800352">085 780 0352</a>
+        <a href="https://wa.me/353857800352">WhatsApp Noel</a>
+        <a href="mailto:noelcarey74@yahoo.ie">noelcarey74@yahoo.ie</a>
+      </div>
+
+      <div>
+        <h3>Pages</h3>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="commercial.html">Commercial & Contracts</a>
+        <a href="about.html">About Noel</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 Carey Tree and Garden Services. All rights reserved. Serving Cork and Munster.
+    </div>
+  </footer>
+
+</body>
+</html>
