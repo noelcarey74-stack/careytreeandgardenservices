@@ -65,6 +65,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      position: relative;
     }
 
     .brand {
@@ -86,6 +87,7 @@
       color: var(--gold);
       font-weight: 900;
       box-shadow: 0 10px 24px rgba(16, 40, 28, 0.22);
+      flex: 0 0 auto;
     }
 
     .brand small {
@@ -120,12 +122,35 @@
       border-radius: 999px;
       font-weight: 800;
       box-shadow: 0 10px 24px rgba(31, 91, 59, 0.25);
+      white-space: nowrap;
+    }
+
+    .mobile-menu-button {
+      display: none;
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 11px 16px;
+      border: none;
+      border-radius: 999px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(16, 40, 28, 0.18);
+      white-space: nowrap;
+      font: inherit;
+    }
+
+    .mobile-menu-panel {
+      display: none;
+    }
+
+    .mobile-menu-panel.open {
+      display: block;
     }
 
     .hero {
       background:
         linear-gradient(90deg, rgba(16, 40, 28, 0.96), rgba(16, 40, 28, 0.76), rgba(16, 40, 28, 0.32)),
-        url("https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=1800&q=80");
+        url("tree-work.jpg");
       background-size: cover;
       background-position: center;
       color: var(--white);
@@ -170,7 +195,7 @@
     .hero p {
       max-width: 820px;
       font-size: clamp(18px, 2vw, 22px);
-      color: rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.92);
       margin-bottom: 34px;
     }
 
@@ -409,7 +434,7 @@
     .cta {
       background:
         linear-gradient(135deg, rgba(16, 40, 28, 0.94), rgba(31, 91, 59, 0.9)),
-        url("https://images.unsplash.com/photo-1520052203542-d3095f1b6cf0?auto=format&fit=crop&w=1600&q=80");
+        url("cork-munster.jpg");
       background-size: cover;
       background-position: center;
       color: var(--white);
@@ -423,7 +448,7 @@
     }
 
     .cta p {
-      color: rgba(255, 255, 255, 0.82);
+      color: rgba(255, 255, 255, 0.9);
       max-width: 760px;
       margin: 0 auto 32px;
       font-size: 19px;
@@ -466,6 +491,37 @@
     @media (max-width: 1000px) {
       .menu { display: none; }
 
+      .mobile-menu-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mobile-menu-panel {
+        position: absolute;
+        top: 82px;
+        left: 6%;
+        right: 6%;
+        background: var(--white);
+        border-radius: 24px;
+        padding: 18px;
+        box-shadow: 0 24px 60px rgba(16, 40, 28, 0.22);
+        border: 1px solid rgba(16, 40, 28, 0.1);
+        z-index: 999;
+      }
+
+      .mobile-menu-panel a {
+        display: block;
+        padding: 14px 16px;
+        border-radius: 14px;
+        color: var(--green-dark);
+        font-weight: 900;
+      }
+
+      .mobile-menu-panel a:hover {
+        background: var(--green-soft);
+      }
+
       .story-grid,
       .approach-grid,
       .insurance-panel,
@@ -479,6 +535,43 @@
     }
 
     @media (max-width: 640px) {
+      .topbar {
+        font-size: 13px;
+      }
+
+      .nav {
+        gap: 10px;
+        padding: 14px 4%;
+      }
+
+      .brand {
+        max-width: 180px;
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+      }
+
+      .nav-cta {
+        padding: 11px 14px;
+        font-size: 14px;
+      }
+
+      .mobile-menu-button {
+        padding: 11px 14px;
+        font-size: 14px;
+      }
+
+      .mobile-menu-panel {
+        top: 76px;
+        left: 4%;
+        right: 4%;
+      }
+
       .hero { padding: 72px 6%; }
 
       h1 { letter-spacing: -2px; }
@@ -496,6 +589,31 @@
       }
 
       .brand small { display: none; }
+    }
+
+    @media (max-width: 430px) {
+      .topbar {
+        display: none;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .mobile-menu-button,
+      .nav-cta {
+        flex: 1;
+        text-align: center;
+      }
+
+      .mobile-menu-panel {
+        top: 118px;
+      }
     }
   </style>
 </head>
@@ -517,7 +635,12 @@
         </div>
       </a>
 
+      <button type="button" id="mobile-menu-button" class="mobile-menu-button" aria-expanded="false">
+        ☰ Menu
+      </button>
+
       <div class="menu">
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="commercial.html">Commercial</a>
         <a class="active" href="about.html">About</a>
@@ -527,6 +650,16 @@
       </div>
 
       <a class="nav-cta" href="tel:0857800352">Call Noel</a>
+
+      <div class="mobile-menu-panel">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -567,7 +700,7 @@
           <p>
             This background means customers get more than a quick cut-and-go service.
             Noel understands trees, timber, machinery, access, ground conditions, storm damage,
-            weather, waste handling and the importance of leaving a site tidy.
+            weather, branches, cuttings and the importance of leaving a site tidy.
           </p>
           <p>
             The business is built for homeowners, schools, clubs, businesses, property owners
@@ -598,7 +731,7 @@
           <div class="value-card">
             <div class="icon">🧹</div>
             <h3>Clean finish</h3>
-            <p>Cuttings, branches and waste are chipped, removed or stacked as agreed before work begins.</p>
+            <p>Branches and hedge cuttings are chipped, stacked or handled on site where agreed before work begins.</p>
           </div>
 
           <div class="value-card">
@@ -622,7 +755,7 @@
           </p>
           <p>
             Jobs are assessed before starting so the price reflects the real work involved:
-            access, time, machinery, chipping, waste, risk, clean-up and disposal where needed.
+            access, time, machinery, chipping, branches, cuttings, risk and clean-up.
           </p>
         </div>
 
@@ -726,6 +859,66 @@
       © 2026 Carey Tree and Garden Services. All rights reserved. Serving Cork and Munster.
     </div>
   </footer>
+
+  <script>
+    const menuButton = document.getElementById("mobile-menu-button");
+    const menuPanel = document.querySelector(".mobile-menu-panel");
+
+    function closeMobileMenu() {
+      if (menuPanel) {
+        menuPanel.classList.remove("open");
+      }
+
+      if (menuButton) {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰ Menu";
+      }
+    }
+
+    function openMobileMenu() {
+      if (menuPanel) {
+        menuPanel.classList.add("open");
+      }
+
+      if (menuButton) {
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.textContent = "× Close";
+      }
+    }
+
+    if (menuButton && menuPanel) {
+      menuButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        if (menuPanel.classList.contains("open")) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+
+      const menuLinks = menuPanel.querySelectorAll("a");
+
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          closeMobileMenu();
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        const clickedInsideMenu = menuPanel.contains(event.target);
+        const clickedButton = menuButton.contains(event.target);
+
+        if (!clickedInsideMenu && !clickedButton) {
+          closeMobileMenu();
+        }
+      });
+
+      window.addEventListener("pageshow", function () {
+        closeMobileMenu();
+      });
+    }
+  </script>
 
 </body>
 </html>
