@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Services | Carey Tree and Garden Services Cork</title>
+
+  <meta name="description" content="Tree work, hedge cutting, garden maintenance, grass cutting, branch chipping, storm clean-up and grounds maintenance services across Cork and Munster by Carey Tree and Garden Services." />
+
+  <meta name="keywords" content="tree work Cork, hedge cutting Cork, garden maintenance Cork, grass cutting Cork, branch chipping Cork, storm clean-up Cork, grounds maintenance Cork, tree pruning Cork, garden clearance Cork" />
+
+  <style>
+    :root {
+      --green-dark: #10281c;
+      --green: #1f5b3b;
+      --green-soft: #eaf4ee;
+      --gold: #d4a64a;
+      --cream: #f7f3ea;
+      --white: #ffffff;
+      --text: #1f2a24;
+      --muted: #66736b;
+      --shadow: 0 18px 55px rgba(0, 0, 0, 0.12);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 10px 6%;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(16, 40, 28, 0.08);
+    }
+
+    .nav {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      color: var(--green-dark);
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(16, 40, 28, 0.22);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: -2px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    .menu a {
+      opacity: 0.85;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      opacity: 1;
+      color: var(--green);
+    }
+
+    .nav-cta {
+      background: var(--green);
+      color: var(--white);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(31, 91, 59, 0.25);
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(16, 40, 28, 0.96), rgba(16, 40, 28, 0.72)),
+        url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1800&q=80");
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      padding: 105px 6%;
+    }
+
+    .hero-inner {
+      max-width: 1220px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(212, 166, 74, 0.18);
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 780px;
+      font-size: clamp(18px, 2vw, 22px);
+      color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-weight: 900;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--green-dark);
+    }
+
+    .btn-dark {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    section {
+      padding: 90px 6%;
+    }
+
+    .container {
+      max-width: 1220px;
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 800px;
+      margin-bottom: 42px;
+    }
+
+    .label {
+      color: var(--green);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: var(--green-dark);
+    }
+
+    .section-head p {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service {
+      background: var(--white);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(16, 40, 28, 0.08);
+      display: grid;
+      grid-template-columns: 0.42fr 0.58fr;
+      min-height: 330px;
+    }
+
+    .service-img {
+      background-size: cover;
+      background-position: center;
+      min-height: 260px;
+    }
+
+    .tree { background-image: url("https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=900&q=80"); }
+    .hedge { background-image: url("https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=900&q=80"); }
+    .garden { background-image: url("https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=900&q=80"); }
+    .chipping { background-image: url("https://images.unsplash.com/photo-1604076913837-52ab5629fba9?auto=format&fit=crop&w=900&q=80"); }
+    .storm { background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"); }
+    .grounds { background-image: url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"); }
+
+    .service-content {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-content h3 {
+      font-size: 28px;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+      letter-spacing: -0.8px;
+    }
+
+    .service-content p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    .ticks {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+    }
+
+    .ticks li {
+      display: flex;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .ticks li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .pricing-note {
+      background: var(--green-dark);
+      color: var(--white);
+      border-radius: 34px;
+      padding: 46px;
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 38px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .pricing-note h2 {
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .pricing-note p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 18px;
+    }
+
+    .price-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .price-box h3 {
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .price-box ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .price-box li {
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .service-area {
+      background: var(--green-soft);
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .area-card {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 14px 40px rgba(16, 40, 28, 0.08);
+      border: 1px solid rgba(16, 40, 28, 0.08);
+    }
+
+    .area-card h3 {
+      font-size: 28px;
+      color: var(--green-dark);
+      margin-bottom: 14px;
+    }
+
+    .area-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: var(--green-soft);
+      color: var(--green-dark);
+      border: 1px solid rgba(31, 91, 59, 0.14);
+      padding: 9px 13px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .cta {
+      background:
+        linear-gradient(135deg, rgba(16, 40, 28, 0.94), rgba(31, 91, 59, 0.9)),
+        url("https://images.unsplash.com/photo-1520052203542-d3095f1b6cf0?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: var(--white);
+      max-width: 850px;
+      margin: 0 auto 18px;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 720px;
+      margin: 0 auto 32px;
+      font-size: 19px;
+    }
+
+    footer {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 54px 6% 24px;
+    }
+
+    .footer-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      gap: 34px;
+      padding-bottom: 34px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    footer h3 {
+      margin-bottom: 14px;
+      color: var(--gold);
+    }
+
+    footer p, footer a {
+      color: rgba(255, 255, 255, 0.78);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .copyright {
+      max-width: 1220px;
+      margin: 22px auto 0;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 14px;
+    }
+
+    @media (max-width: 1000px) {
+      .menu {
+        display: none;
+      }
+
+      .service-list,
+      .pricing-note,
+      .area-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service {
+        grid-template-columns: 1fr;
+      }
+
+      .service-img {
+        min-height: 240px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 72px 6%;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      section {
+        padding: 64px 6%;
+      }
+
+      .pricing-note {
+        padding: 28px;
+      }
+
+      .brand small {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <span>Serving Cork City, Glanmire, East Cork and surrounding areas</span>
+    <span>Call Noel: <strong>085 780 0352</strong> | noelcarey74@yahoo.ie</span>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">CT</div>
+        <div>
+          Carey Tree and Garden Services
+          <small>Tree • Hedge • Garden • Grounds</small>
+        </div>
+      </a>
+
+      <div class="menu">
+        <a class="active" href="services.html">Services</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="tel:0857800352">Call Noel</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Tree, hedge, garden and grounds maintenance services</div>
+        <h1>Outdoor work done safely, tidily and properly.</h1>
+        <p>
+          Carey Tree and Garden Services provides practical, reliable outdoor maintenance
+          across Cork and Munster — from private gardens and hedges to small tree work,
+          chipping, storm clean-up and commercial grounds maintenance.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:0857800352">Call Noel</a>
+          <a class="btn btn-outline" href="https://wa.me/353857800352">WhatsApp Photos for Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="label">What we do</div>
+          <h2>Services for homes, schools, clubs, estates and businesses.</h2>
+          <p>
+            Every job is priced clearly before work begins. Whether it is a hedge,
+            a small tree, a garden clearance or a regular maintenance contract,
+            the aim is always a clean, professional finish.
+          </p>
+        </div>
+
+        <div class="service-list">
+
+          <article class="service">
+            <div class="service-img tree"></div>
+            <div class="service-content">
+              <h3>Tree Work</h3>
+              <p>
+                Small tree cutting, pruning, branch removal and practical tree work for
+                gardens, sites, schools and commercial grounds.
+              </p>
+              <ul class="ticks">
+                <li>Small tree cutting and removal</li>
+                <li>Tree pruning and branch reduction</li>
+                <li>Storm-damaged branches</li>
+                <li>Logs cut and stacked where required</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service-img hedge"></div>
+            <div class="service-content">
+              <h3>Hedge Cutting</h3>
+              <p>
+                Hedge trimming, shaping and reductions for private homes, boundary lines,
+                schools, estates and commercial properties.
+              </p>
+              <ul class="ticks">
+                <li>Hedge trimming and shaping</li>
+                <li>High and overgrown hedge reductions</li>
+                <li>Seasonal hedge maintenance</li>
+                <li>Cuttings cleared, chipped or removed as agreed</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service-img garden"></div>
+            <div class="service-content">
+              <h3>Garden Maintenance</h3>
+              <p>
+                General garden work for customers who want the place brought back under
+                control and kept tidy.
+              </p>
+              <ul class="ticks">
+                <li>Grass cutting and edging</li>
+                <li>Strimming and brushcutting</li>
+                <li>Brambles and overgrown areas</li>
+                <li>Once-off tidy-ups or regular visits</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service-img chipping"></div>
+            <div class="service-content">
+              <h3>Branch Chipping & Clearances</h3>
+              <p>
+                Branches, hedge cuttings and garden waste can be chipped where suitable,
+                saving space and leaving the job clean.
+              </p>
+              <ul class="ticks">
+                <li>Branches chipped on site where suitable</li>
+                <li>Woodchip can be left for mulch if requested</li>
+                <li>Green waste removed where agreed</li>
+                <li>Useful for hedge work, small trees and clear-outs</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service-img storm"></div>
+            <div class="service-content">
+              <h3>Storm Clean-Up</h3>
+              <p>
+                After bad weather, fallen limbs and broken branches can be cut, cleared,
+                chipped or stacked safely.
+              </p>
+              <ul class="ticks">
+                <li>Fallen branches and storm damage</li>
+                <li>Garden and driveway clearances</li>
+                <li>Branches cut and removed</li>
+                <li>Area left tidy and safe</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service-img grounds"></div>
+            <div class="service-content">
+              <h3>Grounds Maintenance</h3>
+              <p>
+                Reliable grounds maintenance for schools, clubs, car parks, housing estates,
+                apartment blocks and business premises.
+              </p>
+              <ul class="ticks">
+                <li>Grass cutting and strimming</li>
+                <li>Hedges, boundaries and entrances</li>
+                <li>Small tree and branch work</li>
+                <li>Once-off or regular contract work</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="pricing-note">
+          <div>
+            <h2>Clear pricing before work starts.</h2>
+            <p>
+              Jobs are priced based on the full work involved — travel, access, time on site,
+              machinery, waste handling, chipping, clean-up and disposal where needed.
+            </p>
+          </div>
+
+          <div class="price-box">
+            <h3>For a quicker estimate, send photos.</h3>
+            <ul>
+              <li>Take a few clear photos of the job.</li>
+              <li>Show access, trees, hedges, waste and parking.</li>
+              <li>Send them by WhatsApp to Noel.</li>
+              <li>You will get a guide price or a visit arranged.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="service-area">
+      <div class="container">
+        <div class="section-head">
+          <div class="label">Areas & customers</div>
+          <h2>Domestic and commercial work welcome.</h2>
+          <p>
+            Based in Cork, Carey Tree and Garden Services covers local private work and
+            larger outdoor maintenance jobs across Cork and Munster.
+          </p>
+        </div>
+
+        <div class="area-grid">
+          <div class="area-card">
+            <h3>Customers we work with</h3>
+            <p>
+              We are open to small and large jobs, once-off work and regular maintenance.
+            </p>
+            <div class="area-tags">
+              <span class="tag">Private homes</span>
+              <span class="tag">Schools</span>
+              <span class="tag">Colleges</span>
+              <span class="tag">Sports clubs</span>
+              <span class="tag">Housing estates</span>
+              <span class="tag">Apartment blocks</span>
+              <span class="tag">Car parks</span>
+              <span class="tag">Business premises</span>
+              <span class="tag">Parks and green areas</span>
+            </div>
+          </div>
+
+          <div class="area-card">
+            <h3>Areas covered</h3>
+            <p>
+              Regular work is focused around Cork City, Glanmire, East Cork and nearby areas,
+              with larger jobs considered across Cork and Munster.
+            </p>
+            <div class="area-tags">
+              <span class="tag">Cork City</span>
+              <span class="tag">Glanmire</span>
+              <span class="tag">East Cork</span>
+              <span class="tag">Carrigtwohill</span>
+              <span class="tag">Little Island</span>
+              <span class="tag">Midleton</span>
+              <span class="tag">Cork County</span>
+              <span class="tag">Munster</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to price a job?</h2>
+        <p>
+          Call Noel or send photos by WhatsApp for a quicker estimate.
+          Fully insured with €6.5 million public liability cover.
+        </p>
+
+        <div class="hero-actions" style="justify-content: center;">
+          <a class="btn btn-primary" href="tel:0857800352">Call 085 780 0352</a>
+          <a class="btn btn-outline" href="https://wa.me/353857800352">WhatsApp Photos</a>
+          <a class="btn btn-outline" href="mailto:noelcarey74@yahoo.ie">Email Noel</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Carey Tree and Garden Services</h3>
+        <p>
+          Tree work, hedge cutting, garden maintenance, branch chipping, storm clean-up
+          and grounds maintenance across Cork and Munster.
+        </p>
+        <p>Fully insured with €6.5 million public liability cover. Insurance details available on request.</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:0857800352">085 780 0352</a>
+        <a href="https://wa.me/353857800352">WhatsApp Noel</a>
+        <a href="mailto:noelcarey74@yahoo.ie">noelcarey74@yahoo.ie</a>
+      </div>
+
+      <div>
+        <h3>Pages</h3>
+        <a href="index.html">Home</a>
+        <a href="commercial.html">Commercial & Contracts</a>
+        <a href="about.html">About Noel</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 Carey Tree and Garden Services. All rights reserved. Serving Cork and Munster.
+    </div>
+  </footer>
+
+</body>
+</html>
