@@ -1115,5 +1115,47 @@
     </div>
   </footer>
 
+  <script>
+    function closeMobileMenu() {
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      if (menuToggle) {
+        menuToggle.checked = false;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      closeMobileMenu();
+
+      const menuLinks = document.querySelectorAll(".mobile-menu-panel a");
+
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          closeMobileMenu();
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        const menuToggle = document.getElementById("mobile-menu-toggle");
+        const menuPanel = document.querySelector(".mobile-menu-panel");
+        const menuButton = document.querySelector(".mobile-menu-button");
+
+        if (!menuToggle || !menuPanel || !menuButton) {
+          return;
+        }
+
+        const clickedInsideMenu = menuPanel.contains(event.target);
+        const clickedMenuButton = menuButton.contains(event.target);
+
+        if (menuToggle.checked && !clickedInsideMenu && !clickedMenuButton) {
+          closeMobileMenu();
+        }
+      });
+    });
+
+    window.addEventListener("pageshow", function () {
+      closeMobileMenu();
+    });
+  </script>
+
 </body>
 </html>
