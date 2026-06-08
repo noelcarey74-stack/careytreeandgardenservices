@@ -6,9 +6,7 @@
 
   <title>Contact Carey Tree and Garden Services | Tree & Garden Work Cork</title>
 
-  <meta name="description" content="Carey Tree and Garden Services is currently being prepared for future tree work, hedge cutting, garden maintenance, branch chipping, storm clean-up and grounds maintenance across Cork and Munster. Not taking bookings at the moment." />
-
-  <meta name="keywords" content="tree services Cork, hedge cutting Cork, garden maintenance Cork, tree work Cork, Carey Tree and Garden Services, Cork and Munster" />
+  <meta name="description" content="Carey Tree and Garden Services is currently being prepared for future tree work, hedge cutting, garden maintenance and grounds maintenance across Cork and Munster. Not taking bookings at the moment." />
 
   <style>
     :root {
@@ -24,9 +22,15 @@
       --radius: 24px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -35,7 +39,10 @@
       line-height: 1.6;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     .topbar {
       background: var(--green-dark);
@@ -66,10 +73,6 @@
       margin: 0 auto;
       font-size: 16px;
       line-height: 1.5;
-    }
-
-    .inactive-link {
-      cursor: default;
     }
 
     header {
@@ -131,7 +134,9 @@
       color: var(--green-dark);
     }
 
-    .menu a { opacity: 0.85; }
+    .menu a {
+      opacity: 0.85;
+    }
 
     .menu a:hover,
     .menu a.active {
@@ -239,7 +244,7 @@
       font-weight: 900;
       transition: 0.2s ease;
       border: none;
-      cursor: pointer;
+      cursor: default;
       font-size: 15px;
     }
 
@@ -254,38 +259,13 @@
       background: rgba(16, 40, 28, 0.35);
     }
 
-    .btn-dark {
-      background: var(--green-dark);
-      color: var(--white);
+    section {
+      padding: 90px 6%;
     }
-
-    .btn-muted {
-      background: var(--green-soft);
-      color: var(--green-dark);
-      border: 1px solid rgba(31, 91, 59, 0.18);
-    }
-
-    section { padding: 90px 6%; }
 
     .container {
       max-width: 1220px;
       margin: 0 auto;
-    }
-
-    .label {
-      color: var(--green);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      font-size: clamp(32px, 5vw, 56px);
-      line-height: 1.05;
-      letter-spacing: -2px;
-      color: var(--green-dark);
     }
 
     .contact-panel {
@@ -313,6 +293,9 @@
 
     .contact-info h2 {
       color: var(--white);
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -2px;
       margin-bottom: 16px;
     }
 
@@ -345,86 +328,32 @@
       font-weight: 900;
     }
 
-    .contact-form {
+    .contact-message {
       padding: 46px;
     }
 
-    .contact-form h2 {
-      margin-bottom: 14px;
+    .contact-message h2 {
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: var(--green-dark);
+      margin-bottom: 16px;
     }
 
-    .contact-form p {
+    .contact-message p {
       color: var(--muted);
       font-size: 18px;
-      margin-bottom: 26px;
+      margin-bottom: 20px;
     }
 
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-
-    .field {
-      display: grid;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    label {
-      font-weight: 900;
-      color: var(--green-dark);
-      font-size: 14px;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      border: 1px solid rgba(16, 40, 28, 0.14);
-      background: var(--cream);
-      border-radius: 16px;
-      padding: 14px 16px;
-      font: inherit;
-      color: var(--text);
-      outline: none;
-    }
-
-    textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    input:disabled,
-    textarea:disabled,
-    select:disabled {
-      opacity: 0.65;
-      cursor: not-allowed;
-    }
-
-    .form-note {
+    .paused-box {
       background: var(--green-soft);
       border: 1px solid rgba(31, 91, 59, 0.14);
-      border-radius: 18px;
-      padding: 16px;
+      border-radius: 22px;
+      padding: 24px;
       color: var(--green-dark);
       font-weight: 800;
-      margin: 18px 0;
-    }
-
-    .send-options {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    .small-note {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 14px;
-      font-weight: 700;
+      margin-top: 24px;
     }
 
     .quick-grid {
@@ -440,7 +369,7 @@
       padding: 30px;
       box-shadow: 0 14px 40px rgba(16, 40, 28, 0.08);
       border: 1px solid rgba(16, 40, 28, 0.08);
-      min-height: 240px;
+      min-height: 220px;
     }
 
     .icon {
@@ -468,62 +397,6 @@
 
     .quick-card span {
       color: var(--green);
-      font-weight: 900;
-    }
-
-    .quote-help {
-      background: var(--green-soft);
-    }
-
-    .help-panel {
-      background: var(--white);
-      border-radius: 36px;
-      padding: 46px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(16, 40, 28, 0.08);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .help-panel p {
-      color: var(--muted);
-      font-size: 18px;
-      margin-top: 16px;
-    }
-
-    .help-list {
-      background:
-        linear-gradient(135deg, rgba(16, 40, 28, 0.96), rgba(16, 40, 28, 0.9)),
-        url("garden-clearance-after.jpg");
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      border-radius: 26px;
-      padding: 28px;
-    }
-
-    .help-list h3 {
-      color: var(--gold);
-      font-size: 24px;
-      margin-bottom: 16px;
-    }
-
-    .help-list ul {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-    }
-
-    .help-list li {
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 800;
-    }
-
-    .help-list li::before {
-      content: "✓ ";
-      color: var(--gold);
       font-weight: 900;
     }
 
@@ -561,10 +434,17 @@
       text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
     }
 
+    .area-content h2 {
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: var(--green-dark);
+      margin-bottom: 16px;
+    }
+
     .area-content p {
       color: var(--muted);
       font-size: 18px;
-      margin-top: 16px;
       margin-bottom: 24px;
     }
 
@@ -598,6 +478,9 @@
       color: var(--white);
       max-width: 850px;
       margin: 0 auto 18px;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -2px;
       text-shadow: 0 4px 22px rgba(0, 0, 0, 0.45);
     }
 
@@ -644,7 +527,9 @@
     }
 
     @media (max-width: 1000px) {
-      .menu { display: none; }
+      .menu {
+        display: none;
+      }
 
       .mobile-menu-button {
         display: inline-flex;
@@ -678,7 +563,6 @@
       }
 
       .contact-panel,
-      .help-panel,
       .areas-grid,
       .footer-grid {
         grid-template-columns: 1fr;
@@ -690,28 +574,30 @@
     }
 
     @media (max-width: 640px) {
-      .hero { padding: 72px 6%; }
+      .hero {
+        padding: 72px 6%;
+      }
 
-      h1 { letter-spacing: -2px; }
+      h1 {
+        letter-spacing: -2px;
+      }
 
-      section { padding: 64px 6%; }
+      section {
+        padding: 64px 6%;
+      }
 
       .contact-info,
-      .contact-form,
-      .help-panel {
+      .contact-message {
         padding: 28px;
       }
 
-      .form-grid,
       .quick-grid {
         grid-template-columns: 1fr;
       }
 
-      .send-options .btn {
-        width: 100%;
+      .brand small {
+        display: none;
       }
-
-      .brand small { display: none; }
     }
 
     @media (max-width: 430px) {
@@ -793,7 +679,7 @@
         <a class="active" href="contact.html">Contact</a>
       </div>
 
-      <a class="nav-cta inactive-link" href="#booking-notice">Not Taking Bookings</a>
+      <a class="nav-cta" href="#booking-notice">Not Taking Bookings</a>
 
       <div class="mobile-menu-panel">
         <a href="index.html">Home</a>
@@ -812,7 +698,9 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="eyebrow">Contact Carey Tree and Garden Services</div>
+
         <h1>Currently not taking bookings.</h1>
+
         <p>
           Carey Tree and Garden Services is currently being prepared for future tree,
           hedge, garden and grounds maintenance work across Cork and Munster.
@@ -820,17 +708,19 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary inactive-link" href="#booking-notice">Not Taking Bookings</a>
-          <a class="btn btn-outline inactive-link" href="#booking-notice">Website in Preparation</a>
-          <a class="btn btn-outline inactive-link" href="#booking-notice">Please Check Back Soon</a>
+          <a class="btn btn-primary" href="#booking-notice">Not Taking Bookings</a>
+          <a class="btn btn-outline" href="#booking-notice">Website in Preparation</a>
+          <a class="btn btn-outline" href="#booking-notice">Please Check Back Soon</a>
         </div>
       </div>
     </section>
 
     <section style="padding-top: 0;">
       <div class="container contact-panel">
+
         <div class="contact-info">
           <h2>Website currently being prepared.</h2>
+
           <p>
             Carey Tree and Garden Services is live online while the business setup is being completed.
             The contact options are paused for now, and the business is not taking bookings at this time.
@@ -857,69 +747,32 @@
           </div>
         </div>
 
-        <div class="contact-form">
-          <h2>Enquiries are paused</h2>
+        <div class="contact-message">
+          <h2>Enquiries are paused.</h2>
+
           <p>
-            The enquiry form is temporarily inactive while the business setup is being completed.
-            Please check back soon.
+            The contact page is temporarily inactive while the business setup is being completed.
           </p>
 
-          <form id="quoteForm">
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Your name</label>
-                <input id="name" name="Name" type="text" placeholder="Currently inactive" disabled />
-              </div>
+          <p>
+            Contact details will be made available again when Carey Tree and Garden Services is ready
+            to take bookings.
+          </p>
 
-              <div class="field">
-                <label for="phone">Phone number</label>
-                <input id="phone" name="Phone" type="tel" placeholder="Currently inactive" disabled />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="service">Type of work</label>
-              <select id="service" name="Service" disabled>
-                <option>Tree, hedge and garden services</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="location">Job location</label>
-              <input id="location" name="Location" type="text" placeholder="Currently inactive" disabled />
-            </div>
-
-            <div class="field">
-              <label for="message">Job details</label>
-              <textarea id="message" name="Message" placeholder="The enquiry form is not active at the moment." disabled></textarea>
-            </div>
-
-            <div class="form-note">
-              Carey Tree and Garden Services is currently being prepared and is not taking bookings at the moment.
-            </div>
-
-            <div class="send-options">
-              <button class="btn btn-muted" type="button" disabled>
-                Not Taking Bookings
-              </button>
-
-              <button class="btn btn-muted" type="button" disabled>
-                Please Check Back Soon
-              </button>
-            </div>
-
-            <p class="small-note">
-              Contact details will be made available again when bookings reopen.
-            </p>
-          </form>
+          <div class="paused-box">
+            Carey Tree and Garden Services is currently being prepared and is not taking bookings at the moment.
+            Please check back soon.
+          </div>
         </div>
+
       </div>
     </section>
 
     <section>
       <div class="container">
-        <div class="label">Contact options paused</div>
-        <h2>The website remains live while setup is completed.</h2>
+        <h2 style="font-size: clamp(32px, 5vw, 54px); line-height: 1.05; letter-spacing: -2px; color: var(--green-dark);">
+          The website remains live while setup is completed.
+        </h2>
 
         <div class="quick-grid">
           <div class="quick-card">
@@ -946,35 +799,6 @@
       </div>
     </section>
 
-    <section class="quote-help">
-      <div class="container help-panel">
-        <div>
-          <div class="label">Future enquiries</div>
-          <h2>What will help when bookings reopen.</h2>
-          <p>
-            When the business is ready to take bookings again, clear photos will help price work more accurately.
-            This will be especially useful for hedge cutting, small trees, overgrown gardens,
-            branch chipping and storm clean-up.
-          </p>
-          <p>
-            For larger work or awkward access, a visit may be needed before pricing.
-          </p>
-        </div>
-
-        <div class="help-list">
-          <h3>Useful photos in the future</h3>
-          <ul>
-            <li>The full hedge, tree or garden area</li>
-            <li>Access for tools, trailer or chipper</li>
-            <li>Branches, cuttings or timber to be handled on site</li>
-            <li>Nearby sheds, walls, cars, glasshouses or buildings</li>
-            <li>Parking and entrance points</li>
-            <li>Your location or Eircode area</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <section class="areas">
       <div class="container areas-grid">
         <div class="area-map">
@@ -982,8 +806,8 @@
         </div>
 
         <div class="area-content">
-          <div class="label">Areas covered</div>
           <h2>Local Cork work, with larger jobs considered across Munster.</h2>
+
           <p>
             Future work is planned around Cork City, Glanmire, East Cork and surrounding areas.
             Larger commercial, school, estate, grounds maintenance and contract-style work may be
@@ -1011,6 +835,7 @@
     <section class="cta">
       <div class="container">
         <h2>Carey Tree and Garden Services is being prepared.</h2>
+
         <p>
           The website is live while the business setup is being completed.
           Bookings and enquiries are not being taken at the moment.
@@ -1018,9 +843,9 @@
         </p>
 
         <div class="hero-actions" style="justify-content: center;">
-          <a class="btn btn-primary inactive-link" href="#booking-notice">Not Taking Bookings</a>
-          <a class="btn btn-outline inactive-link" href="#booking-notice">Website in Preparation</a>
-          <a class="btn btn-outline inactive-link" href="#booking-notice">Please Check Back Soon</a>
+          <a class="btn btn-primary" href="#booking-notice">Not Taking Bookings</a>
+          <a class="btn btn-outline" href="#booking-notice">Website in Preparation</a>
+          <a class="btn btn-outline" href="#booking-notice">Please Check Back Soon</a>
         </div>
       </div>
     </section>
