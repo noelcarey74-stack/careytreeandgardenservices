@@ -8,7 +8,7 @@
 
   <meta name="description" content="Carey Tree and Garden Services is currently being prepared for future tree work, hedge cutting, garden maintenance, branch chipping, storm clean-up and grounds maintenance across Cork and Munster. Not taking bookings at the moment." />
 
-  <meta name="keywords" content="tree services Cork, hedge cutting Cork, garden maintenance Cork, tree work Cork, Carey Tree and Garden Services, Cork and Munster tree and garden services" />
+  <meta name="keywords" content="tree services Cork, hedge cutting Cork, garden maintenance Cork, tree work Cork, Carey Tree and Garden Services, Cork and Munster" />
 
   <style>
     :root {
@@ -259,6 +259,12 @@
       color: var(--white);
     }
 
+    .btn-muted {
+      background: var(--green-soft);
+      color: var(--green-dark);
+      border: 1px solid rgba(31, 91, 59, 0.18);
+    }
+
     section { padding: 90px 6%; }
 
     .container {
@@ -385,16 +391,16 @@
       outline: none;
     }
 
-    input:disabled,
-    textarea:disabled,
-    select:disabled {
-      opacity: 0.72;
-      cursor: not-allowed;
-    }
-
     textarea {
       min-height: 150px;
       resize: vertical;
+    }
+
+    input:disabled,
+    textarea:disabled,
+    select:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
     }
 
     .form-note {
@@ -460,7 +466,7 @@
       margin-bottom: 18px;
     }
 
-    .quick-card a {
+    .quick-card span {
       color: var(--green);
       font-weight: 900;
     }
@@ -727,4 +733,394 @@
       }
 
       .brand-mark {
-        width: 42
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+      }
+
+      .mobile-menu-button,
+      .nav-cta {
+        flex: 1;
+        text-align: center;
+        padding: 11px 14px;
+        font-size: 14px;
+      }
+
+      .mobile-menu-panel {
+        top: 118px;
+        left: 4%;
+        right: 4%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <span>Carey Tree and Garden Services is currently being prepared</span>
+    <span>Not taking bookings at the moment</span>
+  </div>
+
+  <div id="booking-notice" class="booking-notice">
+    <p>
+      <strong>Notice:</strong> Carey Tree and Garden Services is currently being prepared
+      and is not taking bookings at the moment. Please check back soon.
+    </p>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">CT</div>
+        <div>
+          Carey Tree and Garden Services
+          <small>Tree • Hedge • Garden • Grounds</small>
+        </div>
+      </a>
+
+      <button type="button" id="mobile-menu-button" class="mobile-menu-button" aria-expanded="false">
+        ☰ Menu
+      </button>
+
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a class="active" href="contact.html">Contact</a>
+      </div>
+
+      <a class="nav-cta inactive-link" href="#booking-notice">Not Taking Bookings</a>
+
+      <div class="mobile-menu-panel">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Contact Carey Tree and Garden Services</div>
+        <h1>Currently not taking bookings.</h1>
+        <p>
+          Carey Tree and Garden Services is currently being prepared for future tree,
+          hedge, garden and grounds maintenance work across Cork and Munster.
+          Bookings and enquiries are not being taken at the moment.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary inactive-link" href="#booking-notice">Not Taking Bookings</a>
+          <a class="btn btn-outline inactive-link" href="#booking-notice">Website in Preparation</a>
+          <a class="btn btn-outline inactive-link" href="#booking-notice">Please Check Back Soon</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top: 0;">
+      <div class="container contact-panel">
+        <div class="contact-info">
+          <h2>Website currently being prepared.</h2>
+          <p>
+            Carey Tree and Garden Services is live online while the business setup is being completed.
+            The contact options are paused for now, and the business is not taking bookings at this time.
+          </p>
+
+          <div class="contact-card">
+            <strong>Status</strong>
+            <span>Not taking bookings at the moment</span>
+          </div>
+
+          <div class="contact-card">
+            <strong>Website</strong>
+            <span>Currently being prepared</span>
+          </div>
+
+          <div class="contact-card">
+            <strong>Future work</strong>
+            <span>Tree, hedge, garden and grounds maintenance</span>
+          </div>
+
+          <div class="contact-card">
+            <strong>Area covered</strong>
+            <span>Cork City, Glanmire, East Cork, Cork County and Munster</span>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h2>Enquiries are paused</h2>
+          <p>
+            The enquiry form is temporarily inactive while the business setup is being completed.
+            Please check back soon.
+          </p>
+
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="Name" type="text" placeholder="Currently inactive" disabled />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="Phone" type="tel" placeholder="Currently inactive" disabled />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="service">Type of work</label>
+              <select id="service" name="Service" disabled>
+                <option>Tree, hedge and garden services</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="location">Job location</label>
+              <input id="location" name="Location" type="text" placeholder="Currently inactive" disabled />
+            </div>
+
+            <div class="field">
+              <label for="message">Job details</label>
+              <textarea id="message" name="Message" placeholder="The enquiry form is not active at the moment." disabled></textarea>
+            </div>
+
+            <div class="form-note">
+              Carey Tree and Garden Services is currently being prepared and is not taking bookings at the moment.
+            </div>
+
+            <div class="send-options">
+              <button class="btn btn-muted" type="button" disabled>
+                Not Taking Bookings
+              </button>
+
+              <button class="btn btn-muted" type="button" disabled>
+                Please Check Back Soon
+              </button>
+            </div>
+
+            <p class="small-note">
+              Contact details will be made available again when bookings reopen.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="label">Contact options paused</div>
+        <h2>The website remains live while setup is completed.</h2>
+
+        <div class="quick-grid">
+          <div class="quick-card">
+            <div class="icon">🌳</div>
+            <h3>Tree work</h3>
+            <p>Prepared for future tree pruning, branch work, storm branches and tidy-ups.</p>
+            <span>Not taking bookings at the moment</span>
+          </div>
+
+          <div class="quick-card">
+            <div class="icon">✂️</div>
+            <h3>Hedge cutting</h3>
+            <p>Prepared for future hedge trimming, shaping, reductions and maintenance.</p>
+            <span>Not taking bookings at the moment</span>
+          </div>
+
+          <div class="quick-card">
+            <div class="icon">🌿</div>
+            <h3>Garden maintenance</h3>
+            <p>Prepared for future garden tidy-ups, clearances, strimming and grounds work.</p>
+            <span>Not taking bookings at the moment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-help">
+      <div class="container help-panel">
+        <div>
+          <div class="label">Future enquiries</div>
+          <h2>What will help when bookings reopen.</h2>
+          <p>
+            When the business is ready to take bookings again, clear photos will help price work more accurately.
+            This will be especially useful for hedge cutting, small trees, overgrown gardens,
+            branch chipping and storm clean-up.
+          </p>
+          <p>
+            For larger work or awkward access, a visit may be needed before pricing.
+          </p>
+        </div>
+
+        <div class="help-list">
+          <h3>Useful photos in the future</h3>
+          <ul>
+            <li>The full hedge, tree or garden area</li>
+            <li>Access for tools, trailer or chipper</li>
+            <li>Branches, cuttings or timber to be handled on site</li>
+            <li>Nearby sheds, walls, cars, glasshouses or buildings</li>
+            <li>Parking and entrance points</li>
+            <li>Your location or Eircode area</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas">
+      <div class="container areas-grid">
+        <div class="area-map">
+          <h3>Cork & Munster</h3>
+        </div>
+
+        <div class="area-content">
+          <div class="label">Areas covered</div>
+          <h2>Local Cork work, with larger jobs considered across Munster.</h2>
+          <p>
+            Future work is planned around Cork City, Glanmire, East Cork and surrounding areas.
+            Larger commercial, school, estate, grounds maintenance and contract-style work may be
+            considered across Cork and Munster when bookings reopen.
+          </p>
+
+          <div class="tag-row">
+            <span class="tag">Cork City</span>
+            <span class="tag">Glanmire</span>
+            <span class="tag">East Cork</span>
+            <span class="tag">Little Island</span>
+            <span class="tag">Carrigtwohill</span>
+            <span class="tag">Midleton</span>
+            <span class="tag">Cork County</span>
+            <span class="tag">Munster</span>
+            <span class="tag">Schools</span>
+            <span class="tag">Clubs</span>
+            <span class="tag">Estates</span>
+            <span class="tag">Businesses</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Carey Tree and Garden Services is being prepared.</h2>
+        <p>
+          The website is live while the business setup is being completed.
+          Bookings and enquiries are not being taken at the moment.
+          Please check back soon.
+        </p>
+
+        <div class="hero-actions" style="justify-content: center;">
+          <a class="btn btn-primary inactive-link" href="#booking-notice">Not Taking Bookings</a>
+          <a class="btn btn-outline inactive-link" href="#booking-notice">Website in Preparation</a>
+          <a class="btn btn-outline inactive-link" href="#booking-notice">Please Check Back Soon</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Carey Tree and Garden Services</h3>
+        <p>
+          Tree work, hedge cutting, garden maintenance, branch chipping, storm clean-up
+          and grounds maintenance across Cork and Munster.
+        </p>
+        <p>Fully insured with €6.5 million public liability cover. Insurance details available on request.</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Not taking bookings at the moment.</p>
+        <p>The website is currently being prepared.</p>
+        <p>Please check back soon.</p>
+      </div>
+
+      <div>
+        <h3>Pages</h3>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="commercial.html">Commercial & Contracts</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 Carey Tree and Garden Services. All rights reserved. Serving Cork and Munster.
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("mobile-menu-button");
+    const menuPanel = document.querySelector(".mobile-menu-panel");
+
+    function closeMobileMenu() {
+      if (menuPanel) {
+        menuPanel.classList.remove("open");
+      }
+
+      if (menuButton) {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰ Menu";
+      }
+    }
+
+    function openMobileMenu() {
+      if (menuPanel) {
+        menuPanel.classList.add("open");
+      }
+
+      if (menuButton) {
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.textContent = "× Close";
+      }
+    }
+
+    if (menuButton && menuPanel) {
+      menuButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        if (menuPanel.classList.contains("open")) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+
+      const menuLinks = menuPanel.querySelectorAll("a");
+
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          closeMobileMenu();
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        const clickedInsideMenu = menuPanel.contains(event.target);
+        const clickedButton = menuButton.contains(event.target);
+
+        if (!clickedInsideMenu && !clickedButton) {
+          closeMobileMenu();
+        }
+      });
+
+      window.addEventListener("pageshow", function () {
+        closeMobileMenu();
+      });
+    }
+  </script>
+
+</body>
+</html>
